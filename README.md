@@ -60,11 +60,28 @@ Run `gem install iarrogant`
 ## Usage
 
 
-```(sh)>iarrogant <entitlement file path> <team identifier> <bundle id>```
+```
+#entitlement_file_path - The user created .entitlements file, usually has a few items put in automatically by capabilities in XCode
+#team_identifier - The typically 10 capitalized alpha-numeric team identifier, e.g. LOETE2NOBU
+#bundle_id - Your apps bundle id given in Xcode e.g. (com.awesome_app)
+#aps_environment - Usually set to 'production'
+#output_xcent_file - The output file location to save the generated entities
+(sh)>iarrogant <entitlement file path> <team identifier> <bundle id> <aps environment> <output_xcent_file>
+```
 
 ### Convert an entitlement file
 ```
-(sh)>iarrogant MyApp.entitlements 
+(sh)>iarrogant MyApp.entitlements ABCDEFG com.my_app production MyApp.xcent
+```
+
+Now you can sucessfully codesign
+
+```
+#Codesign your .app
+(sh)>codesign --force --sign <SIGNING_IDENTITY (e.g. dev certificate SHA1)> --entitlements MyApp.xcent MyApp.app
+
+#View the embedded signed entitlements
+(sh)>codesign -d --entitlements - MyApp.app
 ```
 
 ## FAQ
