@@ -3,9 +3,9 @@
 ![](https://travis-ci.org/GndFloor/FittrJSON.svg)
 [![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/sotownsend/iarrogant/blob/master/LICENSE)
 
-# What is this for?
+# What is this?
 
-iArrogant is a tool that converts a XML style plist .entitlements file into the proper XML style plist .xcent used by codesign; purpose built for our testing CI system @[Fittr](http://www.fittr.com).
+iArrogant is a command line tool that converts a XML style plist .entitlements file into the proper XML style plist .xcent used by codesign; purpose built for our testing CI system @[Fittr](http://www.fittr.com).
 
 Before you run your entitlements through iarrogant, it may look like this
 
