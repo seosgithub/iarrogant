@@ -46,6 +46,7 @@ After running through iarrogant and passing in the bundle id of `com.myapp` and 
 
 - iOS 7.0+ / Mac OS X 10.9+ (Untested)
 - Xcode 6.1
+- Ruby 2.1 or Higher
 
 ## Communication
 
