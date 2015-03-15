@@ -63,7 +63,7 @@ RSpec.describe "convert_ent_to_xcent" do
     k["application-identifier"].should eq("#{team_identifier}.#{bundle_id}")
   end
 
-  it "Returns a plistable string that contains a true get-task-allow" do
+  it "Returns a plistable string that contains a false get-task-allow" do
     team_identifier = "#{SecureRandom.hex}"
     aps_environment = 'production'
     bundle_id = "com.#{SecureRandom.hex}"
@@ -73,6 +73,24 @@ RSpec.describe "convert_ent_to_xcent" do
     f.write(res)
     f.close
     k = Plist::parse_xml(f.path)
-    k["get-task-allow"].should eq(true)
+    k["get-task-allow"].should eq(false)
+  end
+
+  it "Returns a plist that is semantically equivalent to Test.xcent when given Test.entitlements with ABCEFG team, com.example as identifier, and 'production' for aps_environment" do
+    team_identifier = "ABCDEFG"
+    aps_environment = 'production'
+    bundle_id = "com.example"
+    res = Iarrogant.convert_ent_to_xcent entitlement_path:"./spec/resources/Test.entitlements", team_identifier:team_identifier, bundle_id:bundle_id, aps_environment:aps_environment
+
+    f = Tempfile.new('iarrogant')
+    f.write(res)
+    f.close
+    a = Plist::parse_xml(f.path)
+
+    b = Plist::parse_xml('./spec/resources/Test.xcent')
+
+    for k, v in a
+      b[k].should eq(a[k])
+    end
   end
 end

@@ -1,13 +1,16 @@
 #!/usr/bin/env ruby
 
-#require 'iarrogant'
+require 'iarrogant'
 
 require 'thor'
 
-class IArrogant < Thor
-  desc "convert <entitlement_file> <team_identifier> <bundle_id> <aps_environment>", "Convert from a .Entitlements file into a codesign friendly .xcent"
-  def convert ent_file, team_identifier, bundle_id, aps_environment='production'
+class IarrogantCLI < Thor
+  desc "convert <entitlement_file> <team_identifier> <bundle_id> <aps_environment> <output_file>", "Convert from a .Entitlements file into a codesign friendly .xcent"
+  def convert ent_file, team_identifier, bundle_id, aps_environment, output_file
+    #Returns a string
+    res = Iarrogant.convert_ent_to_xcent(entitlement_path: ent_file, team_identifier: team_identifier, bundle_id: bundle_id, aps_environment: aps_environment)
+    File.write(output_file, res)
   end
 end
 
-IArrogant.start(ARGV)
+IarrogantCLI.start(ARGV)

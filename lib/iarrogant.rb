@@ -12,7 +12,7 @@ module Iarrogant
     r['com.apple.developer.team-identifier'] = team_identifier
     r['aps-environment'] = aps_environment
     r['application-identifier'] = "#{team_identifier}.#{bundle_id}"
-    r['get-task-allow'] = true
+    r['get-task-allow'] = false
 
     r.to_plist
   end
