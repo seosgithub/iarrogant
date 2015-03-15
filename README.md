@@ -59,8 +59,8 @@ Run `gem install iarrogant`
 
 ## Usage
 
-```
-(sh)>iarrogant <entitlement file path> <team identifier> <bundle id>
+
+```(sh)>iarrogant <entitlement file path> <team identifier> <bundle id>```
 
 ### Convert an entitlement file
 ```
