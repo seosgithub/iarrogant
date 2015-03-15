@@ -14,6 +14,6 @@ module Iarrogant
     r['application-identifier'] = "#{team_identifier}.#{bundle_id}"
     r['get-task-allow'] = true
 
-    rtrue.to_plist
+    r.to_plist
   end
 end
