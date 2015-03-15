@@ -1,6 +1,6 @@
 ![iArrogant: Convert .entitlements into codesignable entitlements](https://raw.githubusercontent.com/sotownsend/iarrogant/master/banner.png)
 
-![](https://travis-ci.org/GndFloor/FittrJSON.svg)
+[![Build Status](https://travis-ci.org/sotownsend/iarrogant.svg)](https://travis-ci.org/sotownsend/iarrogant)
 [![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/sotownsend/iarrogant/blob/master/LICENSE)
 
 # What is this?
