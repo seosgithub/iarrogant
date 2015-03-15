@@ -5,7 +5,41 @@
 
 # What is this for?
 
-iArrogant is a tool that converts a XML style plist .entitlements file into the proper XML style plist .xcent used by codesign; purpose built for our testing CI system @[Fittr](http://www.fittr.com)
+iArrogant is a tool that converts a XML style plist .entitlements file into the proper XML style plist .xcent used by codesign; purpose built for our testing CI system @[Fittr](http://www.fittr.com).
+
+Before you run your entitlements through iarrogant, it may look like this
+
+'''
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>com.apple.developer.healthkit</key>
+	<true/>
+</dict>
+</plist>
+
+'''
+
+After running through iarrogant
+'''
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>application-identifier</key>
+	<string>WLKDY3CXPR.com.fittr</string>
+	<key>aps-environment</key>
+	<string>production</string>
+	<key>com.apple.developer.healthkit</key>
+	<true/>
+	<key>com.apple.developer.team-identifier</key>
+	<string>WLKDY3CXPR</string>
+	<key>get-task-allow</key>
+	<false/>
+</dict>
+</plist>
+'''
 
 ## Features
 
