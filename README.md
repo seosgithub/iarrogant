@@ -59,54 +59,19 @@ Run `gem install iarrogant`
 
 ## Usage
 
-### Initialize
-
-```swift
-	//You pulled a UTF8 string from your server and it's sitting in an NSData
-	var myJSONData: NSData! = ...
-	let json = FittrJSON(myJSONData)
-	
-	//You have an NSDictionary that was parsed from JSON
-	var myParsedJSON: NSJSON! = ...
-	let json = FittrJSON(myParsedJSON)
 ```
+(sh)>iarrogant <entitlement file path> <team identifier> <bundle id>
 
-### Getting values
-FittrJSON uses swift's type matching features to automatically resolve the correct getters for the data your requesting.  In order for this to work correctly, you must cast your type with ```as T``` at the end of your request.
-
-```swift
-	//Get a string
-	let val = json["my_key"][0]["my_sub_key"] as String
-	
-	//Get a CGFloat
-	let val = json["my_key"][0]["my_sub_key"] as CGFloat
-	
-	//Array of things
-	let val = json["my_key"][0]["my_sub_key"] as [CGFloat]
-	
+### Convert an entitlement file
 ```
-
-You may, however, store intermediate values without a type cast
-
-```swift
-	//Intermediate calculation with array
-	let arr = json["my_key"]
-	let val = arr[0]["my_sub_key"] as CGFloat
-	
-	//Intermediate calculation with dictionary
-	let dict = json["my_key"][0]
-	let val = dict["my_sub_key"] as CGFloat
+(sh)>iarrogant MyApp.entitlements 
 ```
-
-w.i.p
-
-* * *
 
 ## FAQ
 
-### When should I use FittrJSON?
+### When should I use iarrogant?
 
-If you're starting a new project in Swift, and want to take full advantage of its conventions and language features, FittrJSON is a great choice.
+When you're putting a build server togeather for CI and need to alter the provisioning profile with an adhoc distribution.  Codesign will require a copy of the original xcent entitlements which is a modified version of the entitlements file.  iarrogant will produce the correct xcent file for codesign
 
 ### What's Fittr?
 
@@ -120,8 +85,4 @@ Fittr is a SaaS company that focuses on providing personalized workouts and heal
 
 ## License
 
-FittrJSON is released under the MIT license. See LICENSE for details.
-
-## Credits
-
-This README file was based on ([Alamofire](https://github.com/Alamofire/Alamofire)) by ([@matt](https://twitt.rocm/matt))
+iarrogant is released under the MIT license. See LICENSE for details.
