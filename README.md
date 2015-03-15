@@ -1,4 +1,4 @@
-![iArrogant: Convert .entitlements into codesignable entitlements](https://raw.githubusercontent.com/GndFloor/FittrJSON/master/FittrJSON.png)
+![iArrogant: Convert .entitlements into codesignable entitlements](https://raw.githubusercontent.com/sotownsend/iarrogant/banner.png)
 
 iArrogant is a tool that converts a XML style plist .entitlements file into the proper XML style plist .xcent used by codesign; purpose built for our testing CI system @[Fittr](http://www.fittr.com)
 
