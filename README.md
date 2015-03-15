@@ -55,7 +55,7 @@ After running through iarrogant and passing in the bundle id of `com.myapp` and 
 
 ## Installation
 
-Run `gem install iarrogant`
+Run `sudo gem install iarrogant`
 
 ---
 
