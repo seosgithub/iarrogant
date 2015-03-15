@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+#require 'iarrogant'
+
+require 'thor'
+
+class IArrogant < Thor
+  desc "convert <entitlement_file> <team_identifier> <bundle_id> <aps_environment>", "Convert from a .Entitlements file into a codesign friendly .xcent"
+  def convert ent_file, team_identifier, bundle_id, aps_environment='production'
+  end
+end
+
+IArrogant.start(ARGV)
