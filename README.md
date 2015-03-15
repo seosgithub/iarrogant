@@ -27,13 +27,13 @@ After running through iarrogant
 <plist version="1.0">
 <dict>
 	<key>application-identifier</key>
-	<string>WLKDY3CXPR.com.fittr</string>
+	<string>ZMEAK3CXPR.com.myapp</string>
 	<key>aps-environment</key>
 	<string>production</string>
 	<key>com.apple.developer.healthkit</key>
 	<true/>
 	<key>com.apple.developer.team-identifier</key>
-	<string>WLKDY3CXPR</string>
+	<string>ZMEAK3CXPR</string>
 	<key>get-task-allow</key>
 	<false/>
 </dict>
