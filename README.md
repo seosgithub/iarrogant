@@ -9,7 +9,7 @@ iArrogant is a tool that converts a XML style plist .entitlements file into the 
 
 Before you run your entitlements through iarrogant, it may look like this
 
-'''
+```
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -18,11 +18,10 @@ Before you run your entitlements through iarrogant, it may look like this
 	<true/>
 </dict>
 </plist>
-
-'''
+```
 
 After running through iarrogant
-'''
+```
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -39,7 +38,7 @@ After running through iarrogant
 	<false/>
 </dict>
 </plist>
-'''
+```
 
 ## Features
 
