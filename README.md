@@ -22,7 +22,7 @@ Before you run your entitlements through iarrogant, it may look like this
 </plist>
 ```
 
-After running through iarrogant and passing in the app id of `com.myapp` and team identifier of `ZMEAK3CXPR`
+After running through iarrogant and passing in the bundle id of `com.myapp` and team identifier of `ZMEAK3CXPR`
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
