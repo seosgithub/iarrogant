@@ -40,13 +40,6 @@ After running through iarrogant
 </plist>
 ```
 
-## Features
-
-- [x] Fast. Usually one or two orders of magnitude faster than other swift JSON libraries
-- [x] Reads from NSString/String, NSData, and NSDictionary/Dictionary types
-- [x] Export back to JSON
-- [x] Complete Documentation
-
 ## Requirements
 
 - iOS 7.0+ / Mac OS X 10.9+ (Untested)
@@ -60,7 +53,7 @@ After running through iarrogant
 
 ## Installation
 
-Copy the `FittrJSON.swift` source file directly into your project.
+Run `gem install iarrogant`
 
 ---
 
