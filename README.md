@@ -93,6 +93,10 @@ Now you can sucessfully codesign
 
 When you're putting a build server togeather for CI and need to alter the provisioning profile with an adhoc distribution.  Codesign will require a copy of the original xcent entitlements which is a modified version of the entitlements file.  iarrogant will produce the correct xcent file for codesign
 
+### Wait, can't I just use the regular .xcent file during the build and then sign the provisioning profile?
+
+This may work sometimes.  However, many times XCode inserts other keys, e.g. `beta-test` that will be incompatible across builds.
+
 ### What's Fittr?
 
 Fittr is a SaaS company that focuses on providing personalized workouts and health information to individuals and corporations through phenomenal interfaces and algorithmic data-collection and processing.
